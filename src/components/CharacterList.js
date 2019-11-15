@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
+
 import axios from 'axios';
 
 import CharacterCard from "./CharacterCard";
+
 
 
 
@@ -24,11 +26,15 @@ export default function CharacterList() {
       });
     }
     
-  }, []);
+  }, [setCharacter]);
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {/* <h2>TODO: `array.map()` over your state here!</h2> */}
+      {character.map(character => (
+          <CharacterCard key={character.id} character={character} />
+        ))}
+      
     </section>
   );
 }
