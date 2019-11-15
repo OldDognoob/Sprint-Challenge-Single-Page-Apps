@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 export default function WelcomePage() {
   return (
@@ -14,3 +15,11 @@ export default function WelcomePage() {
     </section>
   );
 }
+
+
+const StyledImage = styled.img`
+display: flex;
+margin: 0 auto;
+width: 400px;
+
+`;
