@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 
 export default function SearchForm() {
-  const [searchForm, setSearchForm]= useState({
-    id:"",
-    name: "",
-    status:"",
-    species: "",
-    type:"",
-    gender:""
-    
-  });
+ const [searchForm, setSearchForm]= useState('');
 
-  const handleFormChange=(event) => {
-    setSearchForm({
-      ...searchForm,
-      [event.target.name]:event.target.value
-    })
-  };
+  // const handleFormChange=(event) => {
+  //   setSearchForm({
+  //     ...searchForm,
+  //     [event.target.name]:event.target.value
+  //   })
+  // };
 
   const handleSubmit = event => {
     event.preventDefault();
+    setSearchForm(searchForm=event.target.value)
+    console.log(searchForm);
+
+
     event.persist();
     console.log(event);
   };
@@ -31,8 +27,8 @@ export default function SearchForm() {
       type="text"
       name="name"
       id="name"
-      placeholder="name"
-      onChange={handleFormChange}
+      placeholder="Search"
+      // onChange={handleFormChange}
       value={searchForm.name}
       />
       <button type="Submit">Search</button>

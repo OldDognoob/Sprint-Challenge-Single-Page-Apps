@@ -1,10 +1,9 @@
 import React from "react";
 
+import CharacterList from './CharacterList'
+
 import styled from "styled-components";
 
-export default function CharacterCard() {
-  return <span>todo: character</span>;
-}
 const StyledCard = styled.div`
   width: 30vw;
   height: auto;
@@ -17,6 +16,12 @@ const StyledCard = styled.div`
     border-radius: 100%;
   }
 `;
+
+export default function CharacterCard(props) {
+  console.log(props);
+  return <StyledCard>todo: character</StyledCard>;
+}
+
 
 
 

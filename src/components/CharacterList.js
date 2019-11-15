@@ -7,6 +7,7 @@ import CharacterCard from "./CharacterCard";
 
 import styled from "styled-components";
 
+import {Link} from "react-router-dom";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -20,17 +21,22 @@ export default function CharacterList() {
       axios
       .get('https://rickandmortyapi.com/api/character/')
       .then(response => {
-        setCharacter(response.data);
+        setCharacter(response.data.results);
       })
       .catch(error => {
         console.log('Server Error', error);
       });
     }
     
-  }, [setCharacter]);
+  }, [character]);
+  console.log(character);
 
   return (
     <section className="character-list">
+      <Link to= "/"><button>Home</button></Link>
+      <Link to= "/search"><button>Search</button></Link>
+
+
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {character.map(character => (
           <CharacterCard key={character.id} character={character} />
