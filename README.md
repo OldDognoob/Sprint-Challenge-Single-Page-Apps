@@ -29,6 +29,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+Using `client-side-routing` means a user clicks on a link, the URL is changing but the request to the server
+is prevented.It is important to understand that using it the whole page will not refresh its self. However, some elements inside of the application may change. 
+The use of `client-side routing` means that the routing between views is faster beacuse we have less data to processed. And last we have smooth transitions and animations between views.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
