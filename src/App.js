@@ -7,6 +7,8 @@ import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
 import CharacterCard from "./components/CharacterCard"
 
+import SearchForm from './components/SearchForm';
+
  
 
 export default function App() {

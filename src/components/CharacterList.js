@@ -5,12 +5,13 @@ import axios from 'axios';
 
 import CharacterCard from "./CharacterCard";
 
-
+import styled from "styled-components";
 
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const[character, setCharacter] = useState([]);
+  
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -38,3 +39,6 @@ export default function CharacterList() {
     </section>
   );
 }
+const StyledSection = styled.section`
+margin-top: 30px;
+`;
