@@ -8,11 +8,16 @@ const Header = Styled.header`
  flex-direction: column;
  max-width: 500px;
  margin: 0 auto;
- 
-
-
 
 `;
+const Button =Styled.button`
+ display: flex;
+ justify-content: center;
+ background-color: aqua;
+ 
+
+`;
+
 
 export default function WelcomePage() {
   return (
@@ -24,7 +29,7 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
-        <Link to='/characters'><button>Characters</button></Link>
+        <Link to='/characters'><Button>Characters</Button></Link>
       </Header>
     </section>
   );
