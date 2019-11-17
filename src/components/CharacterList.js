@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 
 
 export default function CharacterList() {
   const[character, setCharacter] = useState([]);
+  const[filterCharacter,setFilterCharacter] = useState([]);
+  const[matchCharacter, setMatchCharacter] = useState();
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
@@ -21,8 +24,26 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
+useEffect(() => {
+search(matchCharacter)
+}, [matchCharacter])
+
+
+
+
+   function changeHandler(event) {
+     setMatchCharacter(event.target.value)
+     
+   }
+
+   function search(matchCharacter){
+     const result=character.filter(card => card.name.toLowerCase().includes(matchCharacter.toLowerCase()))
+     setCharacter(result)
+   }
+
   return (
     <section className="character-list">
+      <SearchForm changeHandler={changeHandler}/>
 <h2>{character.map(card => {
     return <CharacterCard  data={card}   />
 })}</h2>
