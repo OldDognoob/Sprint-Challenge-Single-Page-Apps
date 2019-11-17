@@ -24,7 +24,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
 <h2>{character.map(card => {
-    return <CharacterCard />
+    return <CharacterCard  data={card}   />
 })}</h2>
     </section>
   );
