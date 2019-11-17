@@ -7,13 +7,17 @@ const Input=Styled.input`
  background-color:lightblue;
 `;
 
+const Section=Styled.section`
+display: flex;
+justify-content: center;
 
+`;
 
 export default function SearchForm(props) {
  
   return (
-    <section className="search-form">
+    <Section className="search-form">
      <Input onChange={props.changeHandler}       type="text" name="text"></Input>
-    </section>
+    </Section>
   );
 }
