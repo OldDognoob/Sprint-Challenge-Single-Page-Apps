@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Header = Styled.header`
  display: flex;
@@ -23,6 +24,7 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
+        <Link to='/characters'><button>Characters</button></Link>
       </Header>
     </section>
   );

@@ -16,7 +16,7 @@ export default function CharacterList() {
      .then(response =>{
       setCharacter(response.data.results)
       setFilterCharacter(response.data.results)
-      console.log(character);
+  
      })
      .catch(error => {
        console.log(error);
@@ -46,7 +46,7 @@ search(matchCharacter)
     <section className="character-list">
       <SearchForm changeHandler={changeHandler}/>
 <h2>{filterCharacter.map(card => {
-    return <CharacterCard  data={card}   />
+    return <CharacterCard key={card.id} data={card}   />
 })}</h2>
     </section>
   );

@@ -6,7 +6,7 @@ export default function CharacterCard(props) {
   <div>
   <div>{props.data.name}</div>
   <div>{props.data.gender}</div>
-  <div><img src={props.data.image}/></div>
+  <div><img src={props.data.image} alt='dead'/></div>
   
   </div>
   )
