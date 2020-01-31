@@ -31,7 +31,7 @@ export default function LocationsList() {
             <h2>We are back!</h2>
             {
                 location.map((location) =>{
-                    return<LocationCard locationCard={location}/>
+                    return<LocationCard  key={location.id} locationCard={location}/>
                 })
             }
         </section>

@@ -28,7 +28,7 @@ export default function EpisodeList() {
           <h2>We are back!</h2>
           {
               episode.map((episode) =>{
-                  return <EpisodeCard  episodeCard={episode}/>
+                  return <EpisodeCard key={episode.id} episodeCard={episode}/>
               })
           }
       </section>
