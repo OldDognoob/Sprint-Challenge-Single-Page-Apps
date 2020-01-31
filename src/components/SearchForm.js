@@ -4,7 +4,7 @@ import Styled from "styled-components";
 const Input=Styled.input`
  display: flex;
  justify-content: center;
- background-color:lightblue;
+ background-color:white;
 `;
 
 const Section=Styled.section`
